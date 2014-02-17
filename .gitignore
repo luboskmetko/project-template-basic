@@ -1,0 +1,13 @@
+/designs
+/previews
+/node_modules
+/build
+/public/assets/css
+/public/assets/js/modernizr.js
+/public/assets/js/require.js
+bower_components
+.sass-cache
+*.sublime-project
+*.sublime-workspace
+*.log
+/Gemfile.lock

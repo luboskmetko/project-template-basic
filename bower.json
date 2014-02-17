@@ -1,0 +1,22 @@
+{
+  "name": "project-template-basic",
+  "version": "0.0.1",
+  "authors": [
+    "Urszula Ciaputa <u.ciaputa@gmail.com>"
+  ],
+  "description": "Project Template: Basic",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-scss": "latest",
+    "modernizr": "latest",
+    "jquery": "~1.11.0",
+    "requirejs": "latest"
+  }
+}

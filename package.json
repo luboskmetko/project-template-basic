@@ -1,6 +1,6 @@
 {
   "name": "project-template-basic",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "Urszula Ciaputa <u.ciaputa@gmail.com>"
   ],
@@ -12,8 +12,8 @@
     "grunt-contrib-requirejs": "latest",
     "grunt-modernizr": "latest",
     "grunt-notify": "latest",
-    "grunt-contrib-uglify": "~0.3.2",
-    "grunt-contrib-jshint": "~0.8.0",
-    "rimraf": "~2.2.6"
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-jshint": "latest",
+    "rimraf": "latest"
   }
 }

@@ -88,18 +88,22 @@ module.exports = function(grunt) {
         },
 
         modernizr: {
-            devFile: 'public/assets/bower_components/modernizr/modernizr.js',
-            outputFile: 'public/assets/js/modernizr.js',
-            extra: {
-                load: false
-            },
-            files: [
-                'public/assets/js/**/*.js',
-                'public/assets/scss/**/*.scss',
-                '!public/assets/js/modernizr.js',
-                '!public/assets/js/modernizr-custom/**/*.js'
-            ],
-            customTests: [ 'public/assets/js/modernizr-custom/**/*.js' ]
+            build: {
+                devFile: 'public/assets/bower_components/modernizr/modernizr.js',
+                outputFile: 'public/assets/js/modernizr.js',
+                extra: {
+                    load: false
+                },
+                files: {
+                    src: [
+                        'public/assets/js/**/*.js',
+                        'public/assets/scss/**/*.scss',
+                        '!public/assets/js/modernizr.js',
+                        '!public/assets/js/modernizr-custom/**/*.js'
+                    ]
+                },
+                customTests: [ 'public/assets/js/modernizr-custom/**/*.js' ]
+            }
         },
 
         uglify: {
@@ -162,6 +166,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
 
-    grunt.registerTask('default', ['modernizr', 'uglify:dev', 'watch']);
-    grunt.registerTask('build', ['jshint:dev', 'modernizr', 'requirejs:build', 'compass:build', 'uglify:build', 'notify:build']);
+    grunt.registerTask('default', ['modernizr:build', 'uglify:dev', 'watch']);
+    grunt.registerTask('build', ['jshint:dev', 'modernizr:build', 'requirejs:build', 'compass:build', 'uglify:build', 'notify:build']);
 };

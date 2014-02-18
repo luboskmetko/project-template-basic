@@ -102,7 +102,8 @@ module.exports = function(grunt) {
                         '!public/assets/js/modernizr-custom/**/*.js'
                     ]
                 },
-                customTests: [ 'public/assets/js/modernizr-custom/**/*.js' ]
+                customTests: [ 'public/assets/js/modernizr-custom/**/*.js' ],
+                uglify: false
             }
         },
 
@@ -114,6 +115,9 @@ module.exports = function(grunt) {
                 files: [{
                     src: 'public/assets/bower_components/requirejs/require.js',
                     dest: 'public/assets/js/require.js'
+                }, {
+                    src: 'public/assets/js/modernizr.js',
+                    dest: 'public/assets/js/modernizr.js'
                 }]
             },
             build: {
@@ -121,11 +125,14 @@ module.exports = function(grunt) {
                     preserveComments: 'some'
                 },
                 files: [{
-                    src: 'public/assets/js/config.js',
+                    src: 'public/assets/js/config-build.js',
                     dest: 'build/assets/js/config.js'
                 }, {
                     src: 'public/assets/bower_components/requirejs/require.js',
                     dest: 'build/assets/js/require.js'
+                }, {
+                    src: 'public/assets/js/modernizr.js',
+                    dest: 'build/assets/js/modernizr.js'
                 }]
             }
         },

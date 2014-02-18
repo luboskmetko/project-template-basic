@@ -10,3 +10,5 @@ require.config({
         jquery: "../bower_components/jquery/dist/jquery.min"
     }
 });
+
+require(["main"]);

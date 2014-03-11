@@ -1,0 +1,11 @@
+/**
+ * Image background for retina
+ */
+@mixin retina-bg-img($filename, $x, $y) {
+    background: image-url($filename) $x $y no-repeat;
+    @include background-size(image-width($filename) auto);
+
+    @include mq-retina {
+        background-image: image-url(retina_filename($filename));
+    }
+}

@@ -11,7 +11,10 @@ module.exports = function(grunt) {
                 fontsDir: 'assets/fonts',
                 javascriptsDir: 'assets/js',
                 relativeAssets: true,
-                importPath: [ 'public/assets/bower_components/' ]
+                importPath: [ 'public/assets/bower_components/' ],
+                require: [
+                    path.resolve(path.join('public','assets','bower_components','compass-retina','lib','sass_extensions.rb'))
+                ]
             },
             dev: {
                 options: {
